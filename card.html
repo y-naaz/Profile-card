@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Design</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: cursive;
+        font-optical-sizing: auto;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .main {
+        height: 486px;
+        margin-top: 85px;
+      }
+      .profile-card {
+        background-color: rgb(140, 154, 254);
+        display: inline-flex;
+        width: 370px;
+        height: 200px;
+        margin: 100px 0 0 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-top: -75px;
+      }
+      .image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        overflow: hidden;
+        background-color: rgb(84, 199, 237);
+        border: 2px solid blue;
+        border-radius: 50%;
+        margin: 85px 107px;
+      }
+      .image .profile-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+      .profile-info {
+        position: absolute;
+        width: 370px;
+        height: 290px;
+        border: 2px solid grey;
+        z-index: -1;
+        margin-top: 193px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        box-shadow: 1px 1px 40px 2px rgb(71, 71, 71);
+      }
+   
+      .name {
+        text-align: center;
+        padding-top: 50px;
+      }
+      p {
+        text-align: center;
+        font-weight: 500;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+      }
+      li {
+        margin-left: 15px;
+      }
+      .spin-icon{
+        font-size: xx-large;
+      }
+      .spin-icon:hover {
+        animation: spinMe 0.5s linear;
+      }
+      @keyframes spinMe {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .css-message ,.css-subscribe{
+        background-color: rgb(66, 87, 247);
+        padding: 6px 15px;
+        border: none;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-top: 10px;
+        color: white;
+        font-size: large;
+      }
+      .css-message:hover, .css-subscribe:hover{
+        background-color: rgb(65, 92, 183);
+        box-shadow: 4px 4px 10px grey;
+        cursor: pointer;
+      }
+      .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .bottom a{
+        text-decoration: none;
+        color: rgb(103, 101, 101);
+      }
+      .support , .comment{
+
+        border-right: 1px solid rgb(158, 158, 158);
+      }
+      .comment , .share ,.support{
+        margin-top: 8px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="profile-card">
+        <div class="image">
+          <img src="girl.png" alt="Photo" class="profile-image" />
+        </div>
+        <div class="profile-info">
+          <h3 class="name">Yasmeen Naaz</h3>
+          <p>&nbsp;&nbsp;&nbsp;Developer and Writer</p>
+        </div>
+      </div>
+      <ul class="contact-info">
+        <li>
+          <a href="#"
+            ><i class="bx bxl-facebook-circle spin-icon" style="color: #1e43e2"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="bx bxl-instagram bx-rotate-90 spin-icon" style="color: #f9206d"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"></a><i class="bx bxl-twitter spin-icon" style="color: #2081f9"></i>
+        </li>
+        <li>
+          <a href="#"><i class="bx bxl-youtube spin-icon" style="color: #f92024"></i></a>
+        </li>
+      </ul>
+      <div class="buttons">
+        <button class="css-subscribe">Subscribe</button>
+        <button class="css-message">Message</button>
+      </div>
+      <div class="bottom">
+        <a href="#" class="support"> <i class='bx bx-heart' style='color:#676565'  ></i>60k</a>
+        <a href="#" class="comment"><i class='bx bx-comment' style='color:#676565'  ></i>20k</a>
+        <a href="#" class="share"><i class='bx bx-share'></i>12k</a>
+      </div>
+    </div>
+  </body>
+</html>
